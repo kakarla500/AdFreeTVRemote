@@ -1,0 +1,120 @@
+﻿{
+    "monetization_and_ad_mediation":  [
+                                          {
+                                              "name":  "AppLovin MAX",
+                                              "type":  "Ad Mediation",
+                                              "package":  "com.applovin.*"
+                                          },
+                                          {
+                                              "name":  "Google AdMob",
+                                              "type":  "Ad Network",
+                                              "package":  "com.google.android.gms.ads"
+                                          },
+                                          {
+                                              "name":  "Meta Audience Network",
+                                              "type":  "Ad Network (bundles secondary dynamic dex in assets)",
+                                              "package":  "com.facebook.ads"
+                                          },
+                                          {
+                                              "name":  "InMobi",
+                                              "type":  "Ad Network",
+                                              "package":  "com.inmobi.ads"
+                                          },
+                                          {
+                                              "name":  "BidMachine",
+                                              "type":  "Ad Network",
+                                              "package":  "io.bidmachine.*"
+                                          },
+                                          {
+                                              "name":  "Liftoff / Vungle",
+                                              "type":  "Ad Network",
+                                              "package":  "com.vungle.ads"
+                                          },
+                                          {
+                                              "name":  "Unity / IronSource LevelPlay",
+                                              "type":  "Ad Mediation",
+                                              "package":  "com.ironsource.*, com.unity3d.*"
+                                          },
+                                          {
+                                              "name":  "Digital Turbine / Fyber",
+                                              "type":  "Ad Network",
+                                              "package":  "com.fyber.inneractive.*, com.digitalturbine.ignite"
+                                          },
+                                          {
+                                              "name":  "Mintegral / MBridge",
+                                              "type":  "Ad Network",
+                                              "package":  "com.mbridge.msdk.*"
+                                          },
+                                          {
+                                              "name":  "Ogury",
+                                              "type":  "Ad Network",
+                                              "package":  "com.ogury.ad.*"
+                                          },
+                                          {
+                                              "name":  "Moloco",
+                                              "type":  "Ad Network",
+                                              "package":  "com.moloco.sdk.*"
+                                          },
+                                          {
+                                              "name":  "Prebid Mobile",
+                                              "type":  "Ad Network",
+                                              "package":  "org.prebid.mobile.*"
+                                          },
+                                          {
+                                              "name":  "ByteDance / Pangle",
+                                              "type":  "Ad Network",
+                                              "package":  "com.bytedance.pangle.*"
+                                          },
+                                          {
+                                              "name":  "Amazon Publisher Services",
+                                              "type":  "Ad Network",
+                                              "package":  "com.amazon.aps"
+                                          }
+                                      ],
+    "core_protocol":  [
+                          {
+                              "purpose":  "Official Android TV pairing and authentication protocol",
+                              "name":  "Google Polo Protocol",
+                              "package":  "com.google.polo"
+                          },
+                          {
+                              "purpose":  "Binary serialization for Polo and TV key commands",
+                              "name":  "Protocol Buffers",
+                              "package":  "com.google.protobuf"
+                          }
+                      ],
+    "ui_and_framework":  [
+                             {
+                                 "purpose":  "Declarative UI layout system",
+                                 "name":  "Jetpack Compose",
+                                 "package":  "androidx.compose.*"
+                             },
+                             {
+                                 "purpose":  "App widgets for home screen TV remote control",
+                                 "name":  "Jetpack Glance",
+                                 "package":  "androidx.glance.*"
+                             },
+                             {
+                                 "purpose":  "Local SQLite persistence for TV apps and EPG channels",
+                                 "name":  "Room Database",
+                                 "package":  "androidx.room.*"
+                             },
+                             {
+                                 "purpose":  "Dependency injection",
+                                 "name":  "Dagger Hilt",
+                                 "package":  "dagger.hilt.*"
+                             },
+                             {
+                                 "purpose":  "Image loading and vector animations",
+                                 "name":  "Glide \u0026 Lottie",
+                                 "package":  "com.bumptech.glide, com.airbnb.lottie"
+                             }
+                         ],
+    "billing":  [
+                    {
+                        "purpose":  "In-App Purchases / Subscriptions",
+                        "name":  "Google Play Billing",
+                        "package":  "com.android.billingclient"
+                    }
+                ]
+}

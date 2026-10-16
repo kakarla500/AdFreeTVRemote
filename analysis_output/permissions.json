@@ -1,0 +1,149 @@
+﻿[
+    {
+        "category":  "Network",
+        "name":  "android.permission.ACCESS_NETWORK_STATE",
+        "description":  "Allows viewing network connection status",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Network",
+        "name":  "android.permission.INTERNET",
+        "description":  "Allows open network sockets",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Device",
+        "name":  "android.permission.VIBRATE",
+        "description":  "Allows haptic feedback on button press",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Device",
+        "name":  "android.permission.WAKE_LOCK",
+        "description":  "Prevents processor from sleeping during remote operation",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Hardware / Privacy",
+        "name":  "android.permission.RECORD_AUDIO",
+        "description":  "Microphone access for voice commands \u0026 Assistant input",
+        "risk":  "HIGH"
+    },
+    {
+        "category":  "Network",
+        "name":  "android.permission.ACCESS_WIFI_STATE",
+        "description":  "Allows viewing Wi-Fi connection information",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Network",
+        "name":  "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+        "description":  "Allows receiving Wi-Fi Multicast packets for mDNS / SSDP TV discovery",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Tracking",
+        "name":  "com.google.android.gms.permission.AD_ID",
+        "description":  "Access to Google Advertising ID",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Service",
+        "name":  "android.permission.FOREGROUND_SERVICE",
+        "description":  "Allows running foreground service",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Service",
+        "name":  "android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE",
+        "description":  "Allows connected device foreground service type (Android 14+)",
+        "risk":  "MEDIUM"
+    },
+    {
+        "maxSdkVersion":  30,
+        "category":  "Hardware",
+        "name":  "android.permission.BLUETOOTH",
+        "description":  "Legacy Bluetooth communication",
+        "risk":  "LOW"
+    },
+    {
+        "maxSdkVersion":  30,
+        "category":  "Hardware",
+        "name":  "android.permission.BLUETOOTH_ADMIN",
+        "description":  "Legacy Bluetooth administration",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Hardware",
+        "name":  "android.permission.BLUETOOTH_CONNECT",
+        "description":  "Bluetooth connection to paired devices",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Phone",
+        "name":  "android.permission.READ_BASIC_PHONE_STATE",
+        "description":  "Read basic cellular network state",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Tracking",
+        "name":  "android.permission.ACCESS_ADSERVICES_AD_ID",
+        "description":  "Privacy Sandbox Ad ID",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Tracking",
+        "name":  "android.permission.ACCESS_ADSERVICES_ATTRIBUTION",
+        "description":  "Ad attribution reporting",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Tracking",
+        "name":  "android.permission.ACCESS_ADSERVICES_TOPICS",
+        "description":  "Topics API for personalized ads",
+        "risk":  "MEDIUM"
+    },
+    {
+        "category":  "Notifications",
+        "name":  "android.permission.POST_NOTIFICATIONS",
+        "description":  "Allows sending push notifications (Android 13+)",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Cloud Messaging",
+        "name":  "com.google.android.c2dm.permission.RECEIVE",
+        "description":  "Firebase Cloud Messaging",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Tracking",
+        "name":  "com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE",
+        "description":  "Google Play install referrer service",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Ad Verification",
+        "name":  "com.amazon.privacypass.ATTEST",
+        "description":  "Amazon Privacy Pass attestation",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Billing",
+        "name":  "com.android.vending.CHECK_LICENSE",
+        "description":  "Google Play Licensing check",
+        "risk":  "LOW"
+    },
+    {
+        "category":  "Billing",
+        "name":  "com.android.vending.BILLING",
+        "description":  "In-App Purchases and Subscriptions",
+        "risk":  "MEDIUM"
+    },
+    {
+        "protectionLevel":  "signature",
+        "name":  "dev.niamor.androidtvremote.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+        "description":  "Internal non-exported broadcast receiver protection",
+        "risk":  "LOW",
+        "category":  "Custom"
+    }
+]

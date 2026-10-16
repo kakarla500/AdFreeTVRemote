@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">AdFree TV Remote</string>
+    <string name="widget_description">Quick TV remote control from your home screen</string>
+    <string name="widget_device_name_default">Android TV</string>
+
+    <!-- Buttons -->
+    <string name="btn_power">Power</string>
+    <string name="btn_up">Up</string>
+    <string name="btn_down">Down</string>
+    <string name="btn_left">Left</string>
+    <string name="btn_right">Right</string>
+    <string name="btn_select">Select</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_home">Home</string>
+    <string name="btn_vol_up">Volume Up</string>
+    <string name="btn_vol_down">Volume Down</string>
+    <string name="btn_mute">Mute</string>
+    <string name="btn_play_pause">Play/Pause</string>
+
+    <!-- UI Labels -->
+    <string name="nav_mode_dpad">D-Pad</string>
+    <string name="nav_mode_trackpad">Trackpad</string>
+    <string name="status_connected">Connected</string>
+    <string name="status_disconnected">Disconnected</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_searching">Searching for Android TVs on local network…</string>
+    <string name="no_devices_found">No TVs discovered yet</string>
+    <string name="scan_again">Rescan</string>
+    <string name="manual_ip_connect">Connect by IP</string>
+    <string name="enter_ip_hint">192.168.1.xxx</string>
+    <string name="connect">Connect</string>
+    <string name="cancel">Cancel</string>
+    <string name="pairing_pin_title">Enter Pairing PIN</string>
+    <string name="pairing_pin_hint">Enter 4 or 6-digit PIN displayed on TV</string>
+    <string name="pair_button">Pair &amp; Connect</string>
+</resources>
+
