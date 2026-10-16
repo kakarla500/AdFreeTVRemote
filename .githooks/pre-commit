@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# AdFreeTVRemote Pre-Commit Security Guard
+# Blocks commits if sensitive secrets, API keys, or private keys are staged.
+# ==============================================================================
+
+echo "🔍 Running pre-commit security scan for sensitive data..."
+FAILED=0
+
+# 1. Prohibited files
+PROHIBITED_FILES=$(git diff --cached --name-only | grep -E '\.(env|jks|keystore|pem|p12|pfx|key)$|google-services\.json|service-account.*\.json')
+if [ -n "$PROHIBITED_FILES" ]; then
+    echo "❌ [SECURITY POLICY VIOLATION] Staging prohibited sensitive files:"
+    echo "$PROHIBITED_FILES"
+    FAILED=1
+fi
+
+# 2. Private keys
+PRIVATE_KEYS=$(git diff --cached -U0 | grep -E '^\+[ ]*-----BEGIN (RSA |DSA |EC |OPENSSH |PGP )?PRIVATE KEY-----')
+if [ -n "$PRIVATE_KEYS" ]; then
+    echo "❌ [SECURITY POLICY VIOLATION] Detected Private Key in staged changes!"
+    FAILED=1
+fi
+
+# 3. Google API Keys (AIzaSy...)
+GOOGLE_KEYS=$(git diff --cached -U0 | grep -E '^\+.*AIza[-0-9A-Za-z_]{35}')
+if [ -n "$GOOGLE_KEYS" ]; then
+    echo "❌ [SECURITY POLICY VIOLATION] Detected Google API Key in staged changes!"
+    FAILED=1
+fi
+
+# 4. AWS Access Keys
+AWS_KEYS=$(git diff --cached -U0 | grep -E '^\+.*(AKIA|ABIA|ACCA|ASIA)[0-9A-Z]{16}')
+if [ -n "$AWS_KEYS" ]; then
+    echo "❌ [SECURITY POLICY VIOLATION] Detected AWS Access Key in staged changes!"
+    FAILED=1
+fi
+
+# 5. GitHub Tokens
+GITHUB_TOKENS=$(git diff --cached -U0 | grep -E '^\+.*(ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9_]{36,255}')
+if [ -n "$GITHUB_TOKENS" ]; then
+    echo "❌ [SECURITY POLICY VIOLATION] Detected GitHub Token in staged changes!"
+    FAILED=1
+fi
+
+if [ $FAILED -ne 0 ]; then
+    echo ""
+    echo "🚫 COMMIT REJECTED: Sensitive credentials or prohibited files were detected."
+    echo "👉 Please remove or redact the sensitive data before committing."
+    exit 1
+fi
+
+echo "✅ Pre-commit security scan passed. No sensitive secrets detected."
+exit 0

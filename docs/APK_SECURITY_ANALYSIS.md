@@ -157,10 +157,10 @@ Static scanning identified heavy ad mediation bundling over 12 ad networks:
 - **Severity**: **Medium-Low** (CWE-798: Use of Hard-coded Credentials)
 - **Values Extracted**:
   - `google_api_key`: `[REDACTED_THIRD_PARTY_ORIGINAL_APK_KEY]`
-  - `google_app_id`: `1:13936813172:android:f96fda8c0fb7a15bb91d21`
-  - `gcm_defaultSenderId`: `13936813172`
-  - `admob_publisher_id`: `pub-9702226135159369`
-  - `admob_app_ad_id`: `ca-app-pub-9702226135159369~3280743260`
+  - `google_app_id`: `[REDACTED_ORIGINAL_APP_ID]`
+  - `gcm_defaultSenderId`: `[REDACTED_ORIGINAL_SENDER_ID]`
+  - `admob_publisher_id`: `[REDACTED_ORIGINAL_PUB_ID]`
+  - `admob_app_ad_id`: `[REDACTED_ORIGINAL_AD_ID]`
 - **Impact**: While Firebase API keys are designed to identify projects, unconstrained keys can be abused to consume quotas or access backend resources if Cloud IAM restrictions are not strictly applied in the Google Cloud Console.
 - **Remediation**: Restrict the API key in Google Cloud Console with package name (`dev.niamor.androidtvremote`) and SHA-1 certificate fingerprint restrictions.
 

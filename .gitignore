@@ -1,13 +1,42 @@
+# Gradle & Build Artifacts
 *.iml
-.gradle
+.gradle/
 /local.properties
 /.idea/
 .DS_Store
-/build
-/app/build
-/captures
-.externalNativeBuild
-.cxx
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
 *.apk
 !AdFreeTVRemote-debug.apk
 
+# Security & Secrets Prevention (Never commit sensitive files)
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.jks
+*.keystore
+*.pkcs12
+*.p12
+*.pfx
+*.cert
+*.cer
+*.crt
+id_rsa*
+id_ed25519*
+secrets.*
+credentials.*
+google-services.json
+GoogleService-Info.plist
+service-account*.json
+*token*
+*.secret
+
+# Analysis & Scratch Dumps
+analysis_output/
+scratch/
+*.log

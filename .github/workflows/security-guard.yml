@@ -1,0 +1,45 @@
+name: Security Guard & Secret Scanning
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  security-check:
+    name: Secrets & Sensitive Data Policy Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify Prohibited Files Policy
+        run: |
+          echo "Checking repository for prohibited sensitive files..."
+          VIOLATIONS=$(find . -type f \( \
+            -name "*.env" -o \
+            -name ".env*" -o \
+            -name "*.jks" -o \
+            -name "*.keystore" -o \
+            -name "*.pem" -o \
+            -name "*.key" -o \
+            -name "*.p12" -o \
+            -name "*.pfx" -o \
+            -name "google-services.json" -o \
+            -name "service-account*.json" \
+          \) -not -path "./.git/*")
+          
+          if [ -n "$VIOLATIONS" ]; then
+            echo "::error::Prohibited sensitive files found in repository:"
+            echo "$VIOLATIONS"
+            exit 1
+          fi
+          echo "✅ No prohibited sensitive files found."
+
+      - name: Run Gitleaks Secret Scanner
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

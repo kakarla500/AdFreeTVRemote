@@ -68,3 +68,24 @@ adb install -r "C:\Users\kakar\Downloads\AdFreeTVRemote-debug.apk"
 .\gradlew.bat assembleDebug
 ```
 Output: `app/build/outputs/apk/debug/app-debug.apk`
+
+---
+
+## 🔒 Security Policies & Push Protection
+
+To prevent accidental leaks of sensitive credentials, API keys, or private certificates:
+
+1. **Local Pre-Commit & Pre-Push Hooks**:
+   Configured in `.githooks/` to automatically block commits and pushes containing:
+   - Private keys (`.pem`, `.key`, `.jks`, `.keystore`)
+   - API keys and tokens (Google API keys, AWS keys, GitHub tokens, Slack tokens)
+   - Sensitive environment files (`.env`, `credentials.json`, `google-services.json`)
+   
+   To enable hooks locally:
+   ```bash
+   git config core.hooksPath .githooks
+   ```
+
+2. **CI Secret Scanning (GitHub Actions)**:
+   - Automated Gitleaks security scanner and prohibited-file verification run on every `push` and `pull_request` (`.github/workflows/security-guard.yml`).
+

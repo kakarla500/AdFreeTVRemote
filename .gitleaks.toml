@@ -1,0 +1,17 @@
+[extend]
+useDefault = true
+
+[rules]
+[[rules]]
+description = "Google Cloud & Firebase API Key"
+id = "google-api-key"
+regex = '''AIza[0-9A-Za-z-_]{35}'''
+secretGroup = 0
+keywords = ["AIza"]
+
+[[rules]]
+description = "Private Key Blocks"
+id = "generic-private-key"
+regex = '''-----BEGIN (RSA |DSA |EC |OPENSSH |PGP )?PRIVATE KEY-----'''
+secretGroup = 0
+keywords = ["PRIVATE KEY"]
